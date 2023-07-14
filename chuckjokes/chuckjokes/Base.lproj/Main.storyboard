@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chuckjokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-41-vlD">
+                                <rect key="frame" x="96.666666666666686" y="67" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="5XC-p8-hwe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="DEM-kj-zsk"/>
+                                    <constraint firstAttribute="width" constant="200" id="Jzb-wr-jhw"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="RGy-Kf-7y3"/>
+                                    <constraint firstAttribute="height" constant="200" id="nA6-Bf-45K"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="u4a-m3-4BK"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZs-E6-Pw3">
+                                <rect key="frame" x="8" y="275" width="377" height="54.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="269" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46i-l0-4TX">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="54.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="9op-oK-tpg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpB-43-9hr">
+                                        <rect key="frame" x="300" y="0.0" width="77" height="54.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save Joke"/>
+                                        <connections>
+                                            <action selector="saveJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bqc-C9-2Zz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAw-4r-vTI">
+                                <rect key="frame" x="146.66666666666666" y="337.33333333333331" width="100" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="C3i-2x-Ss9"/>
+                                    <constraint firstAttribute="height" constant="75" id="kaF-pz-eu8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to saved jokes"/>
+                                <connections>
+                                    <action selector="goToSaved:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3n-2Q-6vV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbm-JH-0sU">
+                                <rect key="frame" x="149.66666666666666" y="420.33333333333331" width="93.666666666666657" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New joke"/>
+                                <connections>
+                                    <action selector="newJokePushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eX-LP-k8h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbm-JH-0sU" firstAttribute="top" secondItem="UAw-4r-vTI" secondAttribute="bottom" constant="8" id="2uW-67-GEi"/>
+                            <constraint firstItem="fRR-41-vlD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="9cV-Pi-OTX"/>
+                            <constraint firstItem="UAw-4r-vTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AB0-FW-tMW"/>
+                            <constraint firstItem="UAw-4r-vTI" firstAttribute="top" secondItem="jZs-E6-Pw3" secondAttribute="bottom" constant="8" id="I4r-Gm-JNv"/>
+                            <constraint firstItem="nbm-JH-0sU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVv-Jh-RjV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZs-E6-Pw3" secondAttribute="trailing" constant="8" id="crJ-DY-Tr7"/>
+                            <constraint firstItem="jZs-E6-Pw3" firstAttribute="top" secondItem="fRR-41-vlD" secondAttribute="bottom" constant="8" id="fGa-Ac-Mjg"/>
+                            <constraint firstItem="jZs-E6-Pw3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hBF-Ef-mNx"/>
+                            <constraint firstItem="fRR-41-vlD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hke-qf-DsM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chuckImageVIew" destination="fRR-41-vlD" id="kQ4-bv-IbQ"/>
+                        <outlet property="goToSavedButton" destination="UAw-4r-vTI" id="4qO-dg-mbP"/>
+                        <outlet property="jokeView" destination="46i-l0-4TX" id="s4E-af-obM"/>
+                        <outlet property="newJokeButton" destination="nbm-JH-0sU" id="zqT-DU-PeI"/>
+                        <outlet property="saveJokeButton" destination="SpB-43-9hr" id="fUl-Ca-R4D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.770992366412212" y="3.5211267605633805"/>
+        </scene>
+        <!--Saved Jokes View Controller-->
+        <scene sceneID="KVK-K2-ABm">
+            <objects>
+                <viewController storyboardIdentifier="SavedJokesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e4X-B0-O0C" customClass="SavedJokesViewController" customModule="chuckjokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bf8-Zf-moV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e81-c3-yaP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="693"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JokeTableViewCell" rowHeight="142" id="tQC-b5-kV1" customClass="JokeTableViewCell" customModule="chuckjokes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="142"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tQC-b5-kV1" id="el2-mC-HMr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="269" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-50-NMJ">
+                                                    <rect key="frame" x="8" y="8" width="377" height="126"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="be3-nx-Air"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZSM-50-NMJ" firstAttribute="top" secondItem="el2-mC-HMr" secondAttribute="top" constant="8" id="5X5-Du-1Hu"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZSM-50-NMJ" secondAttribute="trailing" constant="8" id="LAz-H3-rot"/>
+                                                <constraint firstItem="ZSM-50-NMJ" firstAttribute="leading" secondItem="el2-mC-HMr" secondAttribute="leading" constant="8" id="d06-AL-ykJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZSM-50-NMJ" secondAttribute="bottom" constant="8" id="vaa-pv-D0l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeView" destination="ZSM-50-NMJ" id="0Rg-uR-a0H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-nD-X2Z">
+                                <rect key="frame" x="8" y="760" width="377" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HF6-h2-flJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go back"/>
+                                <connections>
+                                    <action selector="goBackPushed:" destination="e4X-B0-O0C" eventType="touchUpInside" id="czq-04-eVm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DIi-Ti-2tB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DIi-Ti-2tB" firstAttribute="bottom" secondItem="d8Q-nD-X2Z" secondAttribute="bottom" constant="8" id="fmb-p9-cmo"/>
+                            <constraint firstItem="DIi-Ti-2tB" firstAttribute="trailing" secondItem="d8Q-nD-X2Z" secondAttribute="trailing" constant="8" id="mNL-0P-pqu"/>
+                            <constraint firstItem="d8Q-nD-X2Z" firstAttribute="leading" secondItem="DIi-Ti-2tB" secondAttribute="leading" constant="8" id="w0e-sr-gJ3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="d8Q-nD-X2Z" id="81N-qc-Ep9"/>
+                        <outlet property="tableView" destination="e81-c3-yaP" id="6aT-aZ-W94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3LE-cO-CQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.9312977099237" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
